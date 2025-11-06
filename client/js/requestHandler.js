@@ -2,7 +2,7 @@
 
 class RequestHandler {
     constructor() {
-        this.apiBaseUrl = 'http://localhost:3000/api';
+        this.apiBaseUrl = 'https://http-visualizer.vercel.app/api';
     }
 
     // Send simulation request to backend
