@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - HTTP Simulator</title>
+    <link rel="stylesheet" href="/styles/about.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ℹ️ About</h1>
+            <p>Learn more about the HTTP Request-Response Simulator</p>
+            <button class="back-btn" id="backBtn">← Back to Simulator</button>
+        </header>
+
+        <main class="content">
+            <!-- Project Overview -->
+            <section class="card">
+                <h2>📖 About This Project</h2>
+                <p>The <strong>HTTP Request-Response Simulator</strong> is an educational web application designed to help students, developers, and enthusiasts understand how HTTP communication works between clients and servers.</p>
+                <p style="margin-top: 1rem;">This interactive tool visualizes the complete lifecycle of an HTTP request—from DNS lookup to content download—making abstract networking concepts tangible and easy to grasp.</p>
+            </section>
+
+            <!-- Research & Development -->
+            <section class="card">
+                <h2>🔬 Research & Development</h2>
+                <p>This project was built through comprehensive research into HTTP protocols, network simulation, and web communication patterns. Key areas of study included:</p>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li><strong>HTTP/1.1 vs HTTP/2:</strong> Understanding the evolution of web protocols and performance improvements</li>
+                    <li><strong>Network Latency & Packet Loss:</strong> Simulating real-world network conditions</li>
+                    <li><strong>Caching Mechanisms:</strong> How browsers and servers optimize repeated requests</li>
+                    <li><strong>Connection Management:</strong> Persistent vs non-persistent connections</li>
+                    <li><strong>Request/Response Lifecycle:</strong> DNS resolution, TCP handshakes, TLS encryption, and data transfer</li>
+                </ul>
+            </section>
+
+            <!-- Tools & Resources -->
+            <section class="card">
+                <h2>🛠️ Tools & Resources Used</h2>
+                
+                <div style="margin-top: 1.5rem;">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 0.5rem;">CSS Grid Generators</h3>
+                    <ul style="margin-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <li><a href="https://cssgrid-generator.netlify.app/" target="_blank" style="color: var(--accent-primary);">CSS Grid Generator</a> - Interactive tool for creating responsive CSS Grid layouts</li>
+                        <li><a href="https://grid.layoutit.com/" target="_blank" style="color: var(--accent-primary);">Grid Layoutit</a> - Visual CSS Grid layout builder with code export</li>
+                        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" style="color: var(--accent-primary);">CSS-Tricks Grid Guide</a> - Comprehensive reference for CSS Grid properties</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-primary); margin-bottom: 0.5rem;">AI Assistance</h3>
+                    <ul style="margin-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <li><strong>ChatGPT:</strong> Used for generating comprehensive documentation, help content, and user-friendly explanations of technical concepts</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Development Resources</h3>
+                    <ul style="margin-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP" target="_blank" style="color: var(--accent-primary);">MDN Web Docs</a> - HTTP protocol documentation and specifications</li>
+                        <li><a href="https://nodejs.org/" target="_blank" style="color: var(--accent-primary);">Node.js</a> - Backend runtime environment</li>
+                        <li><a href="https://axios-http.com/" target="_blank" style="color: var(--accent-primary);">Axios</a> - HTTP client for making real requests</li>
+                        <li><a href="https://expressjs.com/" target="_blank" style="color: var(--accent-primary);">Express.js</a> - Web application framework</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Design Inspiration</h3>
+                    <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                        <li><a href="https://dribbble.com/" target="_blank" style="color: var(--accent-primary);">Dribbble</a> - UI/UX design patterns and color schemes</li>
+                        <li><a href="https://coolors.co/" target="_blank" style="color: var(--accent-primary);">Coolors</a> - Color palette generation for dark mode theme</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Technical Stack -->
+            <section class="card">
+                <h2>⚙️ Technical Stack</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Frontend</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">HTML5, CSS3, Vanilla JavaScript</p>
+                    </div>
+                    <div style="padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Backend</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Node.js, Express.js</p>
+                    </div>
+                    <div style="padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 8px; border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">HTTP Client</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Axios</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section class="card">
+                <h2>✨ Key Features</h2>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+                    <li>🌐 Toggle between real HTTP requests and mock simulations</li>
+                    <li>⏱️ Adjustable network delay and packet loss simulation</li>
+                    <li>📊 Visual timeline showing request lifecycle stages</li>
+                    <li>💾 Cache behavior demonstration with 304 responses</li>
+                    <li>🍪 Cookie handling and session management</li>
+                    <li>🔗 Connection type comparison (keep-alive vs close)</li>
+                    <li>⚡ HTTP/1.1 vs HTTP/2 performance comparison</li>
+                    <li>📋 Detailed response headers and body display</li>
+                </ul>
+            </section>
+
+            <!-- Educational Purpose -->
+            <section class="card">
+                <h2>🎓 Educational Purpose</h2>
+                <p>This simulator was created to bridge the gap between theoretical knowledge and practical understanding of web technologies. It's designed for:</p>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li>Computer Science students learning networking concepts</li>
+                    <li>Web developers wanting to understand HTTP mechanics</li>
+                    <li>Anyone curious about how the web works under the hood</li>
+                </ul>
+                <p style="margin-top: 1rem;">By visualizing abstract concepts like DNS lookup, TCP handshakes, and TLS encryption, learners can see exactly what happens when they type a URL into their browser.</p>
+            </section>
+
+            <!-- License & Contact -->
+            <section class="card">
+                <h2>📄 License & Contact</h2>
+                <p>This project is open for educational use. Feel free to explore, learn, and build upon it.</p>
+                <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    For questions, suggestions, or contributions, please refer to the Developers Page.
+                </p>
+            </section>
+        </main>
+
+        <footer style="text-align: center; padding: 2rem; color: var(--text-secondary); font-size: 0.9rem; margin-top: 2rem;">
+            <p>Thank You</p>
+        </footer>
+    </div>
+
+    <script src="/js/about.js"></script>
+</body>
+</html>

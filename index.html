@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Request-Response Simulator</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🌐 HTTP Request-Response Simulator</h1>
+            <p>Simulate and visualize HTTP client-server communication</p>
+            
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button class="nav-btn" id="developersBtn">
+                    👨‍💻 Developers
+                </button>
+                <button class="nav-btn" id="helpBtn">
+                    ❓ Help
+                </button>
+                <button class="nav-btn" id="aboutBtn">
+                    ℹ️ About
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Input Section -->
+            <section class="input-section card">
+                <h2>Request Configuration</h2>
+                
+                <form id="simulatorForm">
+                    <!-- URL Input -->
+                    <div class="form-group">
+                        <label for="url">URL / Resource</label>
+                        <input 
+                            type="text" 
+                            id="url" 
+                            placeholder="https://example.com/api/users"
+                            value="https://example.com/api/data"
+                            required
+                        >
+                    </div>
+
+                    <!-- Method Selection -->
+                    <div class="form-group">
+                        <label for="method">Request Method</label>
+                        <select id="method">
+                            <option value="GET">GET</option>
+                            <option value="POST">POST</option>
+                            <option value="PUT">PUT</option>
+                            <option value="DELETE">DELETE</option>
+                        </select>
+                    </div>
+
+                    <!-- Network Delay -->
+                    <div class="form-group">
+                        <label for="delay">
+                            Network Delay: <span id="delayValue">500</span> ms
+                        </label>
+                        <input 
+                            type="range" 
+                            id="delay" 
+                            min="0" 
+                            max="5000" 
+                            value="500" 
+                            step="100"
+                        >
+                    </div>
+
+                    <!-- Packet Loss -->
+                    <div class="form-group">
+                        <label for="packetLoss">
+                            Packet Loss: <span id="packetLossValue">0</span>%
+                        </label>
+                        <input 
+                            type="range" 
+                            id="packetLoss" 
+                            min="0" 
+                            max="100" 
+                            value="0" 
+                            step="5"
+                        >
+                    </div>
+
+                    <!-- Connection Type -->
+                    <div class="form-group">
+                        <label for="connectionType">Connection Type</label>
+                        <select id="connectionType">
+                            <option value="keep-alive">Keep-Alive</option>
+                            <option value="close">Close</option>
+                        </select>
+                    </div>
+
+                    <!-- Real Request Toggle -->
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="useRealRequest" checked>
+                            🌐 Make Real HTTP Request (uncheck for mock)
+                        </label>
+                    </div>
+
+                    <!-- Cache Option -->
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="useCache">
+                            Use Cache (304 Response)
+                        </label>
+                    </div>
+
+                    <!-- Cookie Option -->
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="useCookies">
+                            Include Cookies 🍪
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-primary" id="simulateBtn">
+                        🚀 Send Request
+                    </button>
+                </form>
+            </section>
+
+            <!-- HTTP/2 Comparison Section -->
+            <section class="input-section card">
+                <h2>HTTP/2 vs HTTP/1.1 Comparison</h2>
+                
+                <div class="form-group">
+                    <label for="concurrentRequests">Number of Concurrent Requests</label>
+                    <input 
+                        type="number" 
+                        id="concurrentRequests" 
+                        min="2" 
+                        max="10" 
+                        value="5"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="http2Delay">
+                        Request Delay: <span id="http2DelayValue">300</span> ms
+                    </label>
+                    <input 
+                        type="range" 
+                        id="http2Delay" 
+                        min="100" 
+                        max="2000" 
+                        value="300" 
+                        step="100"
+                    >
+                </div>
+
+                <button type="button" class="btn-secondary" id="compareBtn">
+                    ⚡ Compare HTTP/1.1 vs HTTP/2
+                </button>
+            </section>
+        </div>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <!-- Timeline Visualization -->
+            <div class="card" id="timelineCard" style="display: none;">
+                <h2>Request Timeline</h2>
+                <div id="timeline" class="timeline-container"></div>
+                <div id="totalTime" class="total-time"></div>
+            </div>
+
+            <!-- Response Details -->
+            <div class="card" id="responseCard" style="display: none;">
+                <h2>Response Details</h2>
+                
+                <div class="response-status">
+                    <div class="status-badge" id="statusBadge">
+                        <span id="statusCode"></span>
+                        <span id="statusText"></span>
+                    </div>
+                </div>
+
+                <div class="response-headers">
+                    <h3>Response Headers</h3>
+                    <pre id="headers"></pre>
+                </div>
+
+                <div class="response-body">
+                    <h3>Response Body</h3>
+                    <pre id="responseBody"></pre>
+                </div>
+            </div>
+
+            <!-- Error Display -->
+            <div class="card error-card" id="errorCard" style="display: none;">
+                <h2>❌ Request Failed</h2>
+                <p id="errorMessage"></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/requestHandler.js"></script>
+    <script src="/js/httpVisualizer.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

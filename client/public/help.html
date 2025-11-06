@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - HTTP Simulator</title>
+    <link rel="stylesheet" href="/styles/help.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>❓ Help & Documentation</h1>
+            <p>Learn how to use the HTTP Request-Response Simulator</p>
+            <button class="back-btn" id="backBtn">← Back to Simulator</button>
+        </header>
+
+        <main class="content">
+            <!-- Quick Start Guide -->
+            <section class="card">
+                <h2>🚀 Quick Start Guide</h2>
+                <p class="intro">This simulator helps you understand how websites and apps communicate with servers over the internet. Think of it like watching a letter being sent and replied to, but much faster!</p>
+                
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Enter a URL</h3>
+                            <p>Type the website address you want to test (e.g., https://example.com)</p>
+                            <div class="screenshot-placeholder">
+                                <img src="/images/img1.png" alt="URL input field" onerror="this.style.display='none'">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Choose Settings</h3>
+                            <p>Adjust delay, packet loss, and other options to simulate different network conditions</p>
+                            <div class="screenshot-placeholder">
+                                <img src="/images/img2.png" alt="Settings panel" onerror="this.style.display='none'">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Send Request</h3>
+                            <p>Click "Send Request" and watch the magic happen!</p>
+                            <div class="screenshot-placeholder">
+                                <img src="/images/img3.png" alt="Send button" onerror="this.style.display='none'">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>View Results</h3>
+                            <p>See the timeline, response headers, and data returned by the server</p>
+                            <div class="screenshot-placeholder">
+                                <img src="/images/img4.png" alt="Results display" onerror="this.style.display='none'">
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Understanding HTTP -->
+            <section class="card">
+                <h2>🌐 What is HTTP?</h2>
+                <p><strong>HTTP (HyperText Transfer Protocol)</strong> is the language that browsers and servers use to talk to each other.</p>
+                
+                <div class="analogy-box">
+                    <h4>📬 Real-World Analogy:</h4>
+                    <p>Imagine you're ordering food from a restaurant:</p>
+                    <ul>
+                        <li><strong>You (Client):</strong> Place an order by phone</li>
+                        <li><strong>Restaurant (Server):</strong> Receives your order</li>
+                        <li><strong>Delivery (Response):</strong> Brings your food back</li>
+                    </ul>
+                    <p>HTTP works the same way - your browser orders data, and the server delivers it!</p>
+                </div>
+            </section>
+
+            <!-- Key Terms Explained -->
+            <section class="card">
+                <h2>📚 Key Terms (In Simple Language)</h2>
+                
+                <div class="term-grid">
+                    <div class="term-card">
+                        <div class="term-icon">🎯</div>
+                        <h3>URL (Web Address)</h3>
+                        <p><strong>What it is:</strong> The address of a webpage or resource</p>
+                        <p><strong>Example:</strong> https://www.example.com/products</p>
+                        <p><strong>Like:</strong> A street address for a building</p>
+                    </div>
+
+                    <div class="term-card">
+                        <div class="term-icon">📝</div>
+                        <h3>Request Method</h3>
+                        <p><strong>What it is:</strong> The type of action you want to perform</p>
+                        <p><strong>Types:</strong></p>
+                        <ul>
+                            <li><strong>GET:</strong> Fetch data (like reading a page)</li>
+                            <li><strong>POST:</strong> Send new data (like submitting a form)</li>
+                            <li><strong>PUT:</strong> Update existing data</li>
+                            <li><strong>DELETE:</strong> Remove data</li>
+                        </ul>
+                        <p><strong>Like:</strong> Choosing "read," "write," "edit," or "erase" in a notebook</p>
+                    </div>
+
+                    <div class="term-card">
+                        <div class="term-icon">⏱️</div>
+                        <h3>Network Delay</h3>
+                        <p><strong>What it is:</strong> How long data takes to travel</p>
+                        <p><strong>Measured in:</strong> Milliseconds (ms)</p>
+                        <p><strong>Example:</strong> 500ms = half a second</p>
+                        <p><strong>Like:</strong> The time it takes for a letter to reach someone's mailbox</p>
+                    </div>
+
+                    <div class="term-card">
+                        <div class="term-icon">📦</div>
+                        <h3>Packet Loss</h3>
+                        <p><strong>What it is:</strong> When data gets lost during transmission</p>
+                        <p><strong>Example:</strong> 10% = 1 out of 10 pieces might get lost</p>
+                        <p><strong>Like:</strong> A package getting lost in the mail</p>
+                        <p><strong>Result:</strong> Request fails, you need to try again</p>
+                    </div>
+
+                    <div class="term-card">
+                        <div class="term-icon">💾</div>
+                        <h3>Cache</h3>
+                        <p><strong>What it is:</strong> Saved copy of data for faster loading</p>
+                        <p><strong>Why useful:</strong> Avoids downloading the same thing twice</p>
+                        <p><strong>Like:</strong> Keeping a photocopy instead of going to the library again</p>
+                        <p><strong>Status Code:</strong> 304 Not Modified (using cached version)</p>
+                    </div>
+
+                    <div class="term-card">
+                        <div class="term-icon">🍪</div>
+                        <h3>Cookies</h3>
+                        <p><strong>What it is:</strong> Small pieces of data stored by your browser</p>
+                        <p><strong>Purpose:</strong> Remember your login, preferences, shopping cart</p>
+                        <p><strong>Like:</strong> A membership card that remembers you</p>
+                        <p><strong>Example:</strong> sessionId, userId, theme settings</p>
+                    </div>
+
+                    <div class="term-card">
+                        <div class="term-icon">🔌</div>
+                        <h3>Connection Type</h3>
+                        <p><strong>Keep-Alive:</strong> Connection stays open for multiple requests (faster)</p>
+                        <p><strong>Close:</strong> Connection closes after each request (slower)</p>
+                        <p><strong>Like:</strong> Keeping a phone call going vs. hanging up and calling back</p>
+                    </div>
+
+                    <div class="term-card">
+                        <div class="term-icon">✅</div>
+                        <h3>Status Codes</h3>
+                        <p><strong>What it is:</strong> Server's response about what happened</p>
+                        <ul>
+                            <li><strong>200:</strong> ✅ Success! Everything worked</li>
+                            <li><strong>304:</strong> 💾 Using cached version (faster)</li>
+                            <li><strong>404:</strong> ❌ Not Found (page doesn't exist)</li>
+                            <li><strong>500:</strong> 💥 Server Error (something broke)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Explained -->
+            <section class="card">
+                <h2>⚙️ Features Explained</h2>
+
+                <div class="feature-section">
+                    <h3>🌐 Real vs Mock Requests</h3>
+                    <div class="feature-content">
+                        <div class="screenshot-placeholder">
+                            <img src="/images/img5.png" alt="Real vs Mock toggle" onerror="this.style.display='none'">
+                        
+                        </div>
+                        <div class="feature-explanation">
+                            <p><strong>Real Request (Checked ✅):</strong></p>
+                            <ul>
+                                <li>Actually connects to the URL you entered</li>
+                                <li>Gets real data from real servers</li>
+                                <li>Shows actual response times</li>
+                                <li>Great for testing live websites</li>
+                            </ul>
+                            <p><strong>Mock Request (Unchecked ⬜):</strong></p>
+                            <ul>
+                                <li>Simulates a response locally</li>
+                                <li>Generates fake data for demonstration</li>
+                                <li>No actual internet connection needed</li>
+                                <li>Perfect for learning and testing settings</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-section">
+                    <h3>📊 Request Timeline</h3>
+                    <div class="feature-content">
+                        <div class="screenshot-placeholder">
+                            <img src="/images/img6.png" alt="Timeline visualization" onerror="this.style.display='none'">
+                        
+                        </div>
+                        <div class="feature-explanation">
+                            <p>Shows the journey of your request in stages:</p>
+                            <ol>
+                                <li><strong>DNS Lookup:</strong> Finding the server's address (like looking up a phone number)</li>
+                                <li><strong>TCP Connection:</strong> Establishing a connection (like dialing the phone)</li>
+                                <li><strong>TLS Handshake:</strong> Securing the connection (like using encryption)</li>
+                                <li><strong>Request Sent:</strong> Sending your order to the server</li>
+                                <li><strong>Waiting (TTFB):</strong> Server processing your request</li>
+                                <li><strong>Content Download:</strong> Receiving the response data</li>
+                            </ol>
+                            <p>Each bar shows how long that stage took!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-section">
+                    <h3>⚡ HTTP/1.1 vs HTTP/2 Comparison</h3>
+                    <div class="feature-content">
+                        <div class="screenshot-placeholder">
+                            <img src="/images/img7.png" alt="HTTP/2 comparison" onerror="this.style.display='none'">
+                        
+                        </div>
+                        <div class="feature-explanation">
+                            <p><strong>HTTP/1.1 (Old Way):</strong></p>
+                            <ul>
+                                <li>Sends requests one at a time (sequential)</li>
+                                <li>Like standing in a single-file line</li>
+                                <li>Slower for multiple resources</li>
+                            </ul>
+                            <p><strong>HTTP/2 (New Way):</strong></p>
+                            <ul>
+                                <li>Sends multiple requests at once (parallel)</li>
+                                <li>Like having multiple checkout counters</li>
+                                <li>Much faster for modern websites!</li>
+                            </ul>
+                            <p class="tip">💡 Try comparing 5 requests to see the speed difference!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Response Details -->
+            <section class="card">
+                <h2>📋 Understanding the Response</h2>
+                
+                <div class="response-section">
+                    <h3>Headers</h3>
+                    <div class="screenshot-placeholder">
+                        <img src="/images/img8.png" alt="Response headers" onerror="this.style.display='none'">
+                     
+                    </div>
+                    <p><strong>What they are:</strong> Metadata about the response (information about the data)</p>
+                    <p><strong>Common headers:</strong></p>
+                    <ul>
+                        <li><strong>Content-Type:</strong> What kind of data (JSON, HTML, image, etc.)</li>
+                        <li><strong>Content-Length:</strong> Size of the response</li>
+                        <li><strong>Cache-Control:</strong> How long to store this data</li>
+                        <li><strong>Set-Cookie:</strong> Cookies being saved</li>
+                        <li><strong>Connection:</strong> keep-alive or close</li>
+                    </ul>
+                </div>
+
+                <div class="response-section">
+                    <h3>Body</h3>
+                    <div class="screenshot-placeholder">
+                        <img src="/images/img9.png" alt="Response body" onerror="this.style.display='none'">
+                    
+                    </div>
+                    <p><strong>What it is:</strong> The actual data you requested</p>
+                    <p><strong>Examples:</strong></p>
+                    <ul>
+                        <li>JSON data from an API</li>
+                        <li>HTML content of a webpage</li>
+                        <li>Image or video files</li>
+                        <li>Text documents</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Common Scenarios -->
+            <section class="card">
+                <h2>🎯 Try These Scenarios</h2>
+                
+                <div class="scenario-grid">
+                    <div class="scenario-card">
+                        <h3>🐌 Slow Network</h3>
+                        <p><strong>Settings:</strong></p>
+                        <ul>
+                            <li>Delay: 2000ms</li>
+                            <li>Packet Loss: 0%</li>
+                        </ul>
+                        <p><strong>Learn:</strong> How slow connections affect loading times</p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3>📶 Unstable Connection</h3>
+                        <p><strong>Settings:</strong></p>
+                        <ul>
+                            <li>Delay: 1000ms</li>
+                            <li>Packet Loss: 30%</li>
+                        </ul>
+                        <p><strong>Learn:</strong> Why requests sometimes fail</p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3>💾 Using Cache</h3>
+                        <p><strong>Settings:</strong></p>
+                        <ul>
+                            <li>Check "Use Cache"</li>
+                            <li>Send request twice</li>
+                        </ul>
+                        <p><strong>Learn:</strong> How caching speeds up repeated requests</p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h3>⚡ Fast Network</h3>
+                        <p><strong>Settings:</strong></p>
+                        <ul>
+                            <li>Delay: 100ms</li>
+                            <li>Connection: Keep-Alive</li>
+                        </ul>
+                        <p><strong>Learn:</strong> Ideal performance conditions</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Troubleshooting -->
+            <section class="card">
+                <h2>🔧 Troubleshooting</h2>
+                
+                <div class="troubleshoot-item">
+                    <h3>❌ "Request Failed" Error</h3>
+                    <p><strong>Possible Causes:</strong></p>
+                    <ul>
+                        <li>Packet loss is too high (try reducing it)</li>
+                        <li>URL is invalid or unreachable</li>
+                        <li>Server is down or blocking requests</li>
+                        <li>No internet connection (for real requests)</li>
+                    </ul>
+                    <p><strong>Solution:</strong> Try with Mock mode first, or use a different URL</p>
+                </div>
+
+                <div class="troubleshoot-item">
+                    <h3>⏳ Request Taking Too Long</h3>
+                    <p><strong>Possible Causes:</strong></p>
+                    <ul>
+                        <li>Delay is set too high</li>
+                        <li>Real server is slow to respond</li>
+                    </ul>
+                    <p><strong>Solution:</strong> Reduce the delay slider or wait patiently</p>
+                </div>
+
+                <div class="troubleshoot-item">
+                    <h3>📦 Packet Loss Every Time</h3>
+                    <p><strong>Cause:</strong> Packet loss slider is above 0%</p>
+                    <p><strong>Solution:</strong> Move the slider back to 0% for reliable requests</p>
+                </div>
+            </section>
+
+            <!-- Tips & Best Practices -->
+            <section class="card">
+                <h2>💡 Tips & Best Practices</h2>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <span class="tip-icon">🎓</span>
+                        <p><strong>Learning Tip:</strong> Start with mock requests to understand concepts without worrying about real servers</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <span class="tip-icon">🔍</span>
+                        <p><strong>Testing Tip:</strong> Use real requests to see how actual websites respond</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <span class="tip-icon">⚡</span>
+                        <p><strong>Performance Tip:</strong> Enable Keep-Alive connections for better performance</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <span class="tip-icon">💾</span>
+                        <p><strong>Caching Tip:</strong> Send the same request twice - first without cache, then with cache to see the difference</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <span class="tip-icon">📊</span>
+                        <p><strong>Comparison Tip:</strong> Use HTTP/2 comparison with 5+ requests to see real performance gains</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <span class="tip-icon">🌐</span>
+                        <p><strong>URL Tip:</strong> Try popular APIs like for YouTube for testing</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="card">
+                <h2>❔ Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h3>Q: Is my data safe?</h3>
+                    <p>A: Yes! Real requests go directly to the URL you specify. Mock requests are generated locally and never leave your computer.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: Can I use this with any website?</h3>
+                    <p>A: Yes, but some websites may block automated requests. If you get errors, try mock mode or use test APIs.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: What's the difference between delay and actual response time?</h3>
+                    <p>A: Delay is artificially added for simulation. Real response time includes actual network and server processing time.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: Why use packet loss simulation?</h3>
+                    <p>A: It helps you understand how applications behave on unreliable networks (like mobile data or WiFi with interference).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: Can I see HTTPS (secure) requests?</h3>
+                    <p>A: Yes! Just use URLs starting with https://. The simulator will show the TLS handshake stage.</p>
+                </div>
+            </section>
+
+            <!-- Additional Resources -->
+            <section class="card">
+                <h2>📚 Learn More</h2>
+                <p>Want to dive deeper into HTTP concepts?</p>
+                <ul class="resource-list">
+                    <li>🔗 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP" target="_blank">MDN Web Docs - HTTP</a></li>
+                    <li>🔗 <a href="https://http.cat/" target="_blank">HTTP Status Codes Explained (with cats!)</a></li>
+                    <li>🔗 <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder - Free Test API</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Need more help? Visit the <a href="/about.html">About</a> page or check the <a href="/developers.html">Developer Guide</a></p>
+        </footer>
+    </div>
+
+    <script src="/js/help.js"></script>
+</body>
+</html>
