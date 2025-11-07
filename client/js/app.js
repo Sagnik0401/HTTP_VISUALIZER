@@ -165,3 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '/about.html';
     });
 });
+
+// Downloads button
+document.getElementById('downloadsBtn')?.addEventListener('click', () => {
+    window.location.href = '/downloads.html';
+});

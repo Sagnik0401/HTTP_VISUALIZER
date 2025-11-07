@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - HTTP Request-Response Simulator</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/downloads.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">📥 Downloads</h1>
+                <p class="subtitle">Documentation and Resources</p>
+            </div>
+            <nav class="header-nav">
+                <a href="/" class="nav-link">← Back to Simulator</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="downloads-main">
+            <!-- PDF Viewer Section -->
+            <section class="pdf-section">
+                <div class="section-header">
+                    <h2>HTTP Simulator Documentation</h2>
+                    <p>Complete guide to understanding HTTP requests and responses</p>
+                </div>
+
+                <!-- PDF Viewer Container -->
+                <div class="pdf-viewer-container">
+                    <div class="pdf-controls">
+                        <button id="prevPage" class="pdf-btn" aria-label="Previous page">
+                            <span>←</span> Previous
+                        </button>
+                        <div class="page-info">
+                            Page <span id="currentPage">1</span> of <span id="totalPages">--</span>
+                        </div>
+                        <button id="nextPage" class="pdf-btn" aria-label="Next page">
+                            Next <span>→</span>
+                        </button>
+                        <div class="zoom-controls">
+                            <button id="zoomOut" class="pdf-btn-small" aria-label="Zoom out">−</button>
+                            <span id="zoomLevel">100%</span>
+                            <button id="zoomIn" class="pdf-btn-small" aria-label="Zoom in">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="pdf-viewer-wrapper">
+                        <canvas id="pdfCanvas"></canvas>
+                        <div id="pdfLoading" class="pdf-loading">
+                            <div class="spinner"></div>
+                            <p>Loading PDF...</p>
+                        </div>
+                        <div id="pdfError" class="pdf-error" style="display: none;">
+                            <p>⚠️ Unable to load PDF. Please try downloading instead.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Button -->
+                <div class="download-section">
+                    <a href="docs/Documentation-CNProjFinal.pdf" download class="download-btn">
+                        <span class="download-icon">⬇</span>
+                        <span class="download-text">
+                            <strong>Download PDF</strong>
+                            <small>HTTP Simulator Guide (PDF)</small>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 HTTP Request-Response Simulator. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="js/downloads.js"></script>
+</body>
+</html>
